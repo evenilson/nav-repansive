@@ -1,0 +1,128 @@
+@import url('https://fonts.googleapis.com/css2?family=Concert+One&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background: #884ea0;
+    font-family: 'Concert One', cursive;
+}
+.navigation {
+    background: rgba(0, 0, 0, .3);
+    
+    display: flex;
+    justify-content: space-between;
+    
+    padding: 20px;
+}
+.navigation a {
+    color: #fff;
+    
+    text-decoration: none;
+}
+.navigation .menu {
+    display: flex;
+
+    transition: 0.5s ease-in;
+}
+.navigation .menu li {
+    padding: 0 20px;
+    
+    list-style: none;
+    
+    opacity: 0.7;
+}
+.navigation .menu li:hover {
+    opacity: 1;
+}
+.navigation .hamburguer {
+    position: relative;
+    z-index: 999;
+    
+    height: 30px;
+    width: 30px;
+    
+    display: none;
+}
+.navigation .hamburguer:after {
+    content: "";
+    
+    position: absolute;
+    top: 30%;
+    left: 15%;
+    
+    width: 70%;
+    height: 12%;
+    
+    background-color: #fff;
+    
+    border-radius: 20px;
+    
+    transition: 1s ease-in;
+}
+
+.navigation .hamburguer:before {
+    content: "";
+    
+    position: absolute;
+    top: 60%;
+    right: 15%;
+    
+    width: 70%;
+    height: 12%;
+    
+    background-color: #fff;
+    
+    border-radius: 20px;
+    
+    transition: 0.5s ease-in-out;
+}
+
+#check {
+    display: none;
+}
+
+#check:checked + label .hamburguer:after {
+    transform: rotate(225deg);
+
+    top: 45%;
+}
+
+#check:checked + label .hamburguer:before {
+    transform: rotate(-405deg);
+
+    width: 70%;
+    top: 45%;
+}
+
+@media (max-width: 500px) {
+    .navigation .hamburguer {
+        display: block;
+    }
+
+    .navigation .menu {
+        position: fixed;
+        top: 0;
+        right: -550px;
+
+        height: 100vh;
+        width: 100%;
+
+        margin: 0;
+
+        background: rgba(0, 0, 0, .7);
+
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .navigation .menu li {
+        margin: 30px 0;
+    }
+    
+    #check:checked ~ .menu {
+        right: 0;
+    }
+}
