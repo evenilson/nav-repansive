@@ -171,6 +171,12 @@ body {
         flex-direction: column-reverse;
         align-items: center;
         justify-content: center;
+
+    }
+
+    .navigation .menu .search{
+        width: 90%; 
+        height: 40px;   
     }
 
     .navigation .menu li {
