@@ -186,8 +186,12 @@ body {
     }
 
     .navigation .menu .search{
-        width: 90%; 
-        height: 40px;   
+  
+        height: 40px;
+    }
+
+    .navigation .menu .search:hover {
+        width:  90%;
     }
 
     .navigation .menu li {
