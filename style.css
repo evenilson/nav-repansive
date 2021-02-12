@@ -162,7 +162,7 @@ body {
     top: 45%;
 }
 
-@media (max-width: 500px) {
+@media screen and (max-width: 820px) {
     .navigation .hamburguer {
         display: block;
     }
@@ -170,7 +170,7 @@ body {
     .navigation .menu {
         position: fixed;
         top: 0;
-        right: -550px;
+        right: -1000px;
 
         height: 100vh;
         width: 100%;
